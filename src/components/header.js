@@ -1,0 +1,45 @@
+import React from 'react';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+import { Link } from 'gatsby';
+import Navegacion from './nav';
+
+
+const EnlaceHome = styled(Link)`
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+`;
+
+const Header = () => {
+    return ( 
+        <header
+            css={css`
+                background-color: rgb(255,89,79);
+                padding: 1rem;
+            `}
+        >
+            <div
+                css={css`
+                    max-width: 1200px;
+                    margin: 0 auto;
+
+                    @media (min-width: 768px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                `}
+            >
+                <EnlaceHome
+                    to='/'
+                ><h1>El Rincón de María</h1> </EnlaceHome>
+                
+
+                <Navegacion />
+            </div>
+        </header>
+     );
+}
+ 
+export default Header;
